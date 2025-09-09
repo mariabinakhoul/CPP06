@@ -1,11 +1,18 @@
 #include "ScalarConverter.h"
+#include <iostream>
 
 int main(int argc, char **argv)
 {
-	std::cout << "Scalar Converter: \n";
-	if (argc != 2)
-		std::cout<< "Give me something i can work with...\n";
-	else
-		ScalarConverter::converter(argv[1]);
-	return EXIT_SUCCESS;
+    if (argc != 2)
+    {
+        std::cerr << "Usage: ./convert <literal>" << std::endl;
+        return 1;
+    }
+
+    std::string literal = argv[1];
+
+    // Call static method directly, no instance needed
+    ScalarConverter::converter(literal);
+
+    return 0;
 }
