@@ -4,7 +4,7 @@ COMP = c++
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = main.cpp 
+SRC = main.cpp Serializer.cpp 
 
 OBJS = $(addprefix objs/, $(SRC:.cpp=.o))
 
